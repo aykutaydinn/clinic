@@ -1,4 +1,4 @@
-## MyClinic Web App
+# MyClinic Web App
 
 MyClinic is an online web application for Medical Practices and Clinics that would like
 to have an online management system along with a website where people can make
@@ -7,7 +7,7 @@ previous, upcoming appointments and their details.
 
 ## How to Use
 
-1 - How to Login / Register
+### 1 - How to Login / Register
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206519127-0d07b230-3b57-497c-b940-f28f24edb49d.png">
 
@@ -25,7 +25,7 @@ After entering the required information your account will be created and
 you will be automatically logged in to the system.
 
 
-2. How to use Admin Dashboard
+### 2. How to use Admin Dashboard
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206519329-187517c8-cb3a-4e61-b050-87e020ae59cc.png">
 
@@ -37,7 +37,7 @@ Step 2- The dashboard will come with a navigation bar on the left hand side of t
 which can be used to see different interfaces.
 
 
-2.1 Manage Doctors on Admin Dashboard
+#### 2.1 Manage Doctors on Admin Dashboard
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206519437-1154a421-f80b-4390-8ff7-b768859c1a8b.png">
 
@@ -53,7 +53,7 @@ Step4- To delete the existing doctor, simply click on delete underneath the name
 doctor you wish to delete.
 
 
-2.2 Manage Patients on Admin Dashboard
+#### 2.2 Manage Patients on Admin Dashboard
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206519569-4e394f17-c37d-4938-9f56-020ea0344377.png">
 
@@ -63,10 +63,10 @@ will show up on the right side of the screen.
 Step 2- To update the existing patien’s details, simply click on the name then update the
 field that you wish to update.
 
-Step3- To delete the existing patient, simply click on delete underneath the name of the
+Step 3- To delete the existing patient, simply click on delete underneath the name of the
 patient you wish to delete.
 
-2.3 Manage Appointments on Admin Dashboard
+#### 2.3 Manage Appointments on Admin Dashboard
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206520847-13b184a3-fcdf-48fe-ab6d-ba53fab00871.png">
 
@@ -81,7 +81,7 @@ Step 3- To view details of the appointments, click on the date or details button
 
 Step 4- To view patient or doctor details, click on their name.
 
-3. How to use Doctor Dashboard
+### 3. How to use Doctor Dashboard
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206520949-96ba114e-21c0-43b5-8a71-2f5e2523ff30.png">
 
@@ -91,7 +91,7 @@ Dashboard.
 Step 2- The dashboard will come with a navigation bar on the left hand side of the page, which
 can be used to see different interfaces
 
-3.1 View Appointments on Doctor Dashboard.
+#### 3.1 View Appointments on Doctor Dashboard.
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206521050-bacaae2e-9dd2-41e1-977b-7e575aa69f29.png">
 
@@ -107,7 +107,7 @@ specific line.
 Step 3- To view patient details, click on the patient's name.
 
 
-3.2 View/Update Weekly Availability
+#### 3.2 View/Update Weekly Availability
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206521128-620b0a7f-1726-4d6e-8686-b4b60d7e23a7.png">
 
@@ -119,7 +119,10 @@ to the days.
 
 Step 3- To save the changes, click on the update button.
 
-4. Book an Appointment as a Patient
+### 4. Book an Appointment as a Patient
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206522355-768f074c-3ec5-475c-9db2-63030cbaa35b.png">
+
 
 Step 1- After clicking on “Book Appointment” in the navigation bar, appointment interface
 
@@ -148,24 +151,32 @@ Appointments” Page, where you see all appointment details of yours. This panel
 be reachable under the “Account” tab.
 
 
-5. How to use Account Page as Patient
+### 5. How to use Account Page as Patient
 
 Step 1- Click on Account tab in Navigation Bar.
 
 Step 2- You can choose one of the options depending on what you would like to do.
 My Appointments - to view appointment details of yours and to cancel any if you want to.
 
-5.1 My Appointments
+#### 5.1 My Appointments
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206522549-2cda2d29-fa16-485c-acae-b010749b6a8e.png">
+
 
 Step 1- On the grid view you can see all the important information about an appointment
 of yours. But if you wish, you can also enter any of these appointments by clicking the
 details button.
 
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206522647-2191faab-3ae8-41e5-9448-69c11991ec72.png">
+
 
 Step 2- In this interface the appointment can be cancelled by clicking on “Cancel
 Appointment Button”
 
-5.2 My Details
+#### 5.2 My Details
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206522802-b0e42d43-35fe-4dfe-9ce7-6a0c2e5ef468.png">
+
 
 Step 1- After clicking My Details under Account tab, a form that will contain all the details
 of the user, which can also be updated through the same form.
@@ -175,9 +186,4 @@ Step 2- If any updates are done, click on “Update Changes” to save the chang
 
 Also password can be changed by clicking the “Change Password” tab on the left hand
 side.
-
-Troubleshooting
-
-Since this is a web based project any issues can only be fixed by our programmers. We are more
-than happy to help you with our 7/24 support while we ensure that we provide you with an
-entirely glitch-free platform.
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/55983912/206522933-8034c686-a072-49f0-8007-c66b247d5c9e.png">
