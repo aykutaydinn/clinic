@@ -24,7 +24,6 @@
 <body>
 @auth
 	<script>
-	var count = Number(localStorage.getItem('count')) || 0;
 	intercomSettings = {
 		app_id: "ayir2oly",
 		name: <?php echo json_encode(Auth::user()->name) ?>, // Full name
@@ -80,13 +79,13 @@
 					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					      
 					      <ul class="nav nav-pills navbar-right" style="font-size: 20px;">
-					        <li><a class="menu" id="my_custom_link" href="#" onclick="Intercom('show')">Home</a></li>
+					        <li><a class="menu" id="my_custom_link" href="/">Home</a></li>
                             <li><a class="menu" href="/appointment" >Book Appointment</a></li>
                             <li><a class="menu" href="/contactus">Contact Us</a></li>
-                            <li><a class="menu" href="/about" onClick="updateIt()">About Us</a></li>
+                            <li><a class="menu" href="/about">About Us</a></li>
 							@auth
                             <li><a class="menu " href="{{ route('login') }}" class="text-sm text-gray-700 underline">Account</a>
-							<li><a class="menu " href="{{ route('logout') }}" class="text-sm text-gray-700 underline">Logout</a>
+							<li><a class="menu " href="{{ route('logout') }}" class="text-sm text-gray-700 underline" onclick="Intercom('shutdown')">Logout</a>
                             @else
                             <li><a class="menu " href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
                             @endif
@@ -127,27 +126,5 @@
 	
 	
 	</div>
-
-	<script>
-		function increase(){
-			localStorage.setItem('count', count + 1);
-			count = Number(localStorage.getItem('count')) || 0;
-			return count;
-		}
-
-		const queryString = window.location.search;
-		const urlParams = new URLSearchParams(queryString);
-		const test = urlParams.get('test')
-		if (test == "error"){
-			Intercom('startTour', 388087);
-		}
-
-		function updateIt(){
-			Intercom('update', {"Test2": "aykkkk"});
-		}
-
-		
-
-</script>
 </body>
 </html>
