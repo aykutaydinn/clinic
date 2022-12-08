@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS API TEST</title>
+</head>
+<body>
+    App ID: <input type="text" class="" name='app_id' id="app_id"/> <br> <br>
+    Boot as: <select id="persontype" name="persontype" onchange="showEmail()">
+                <option value="visitor">Visitor</option>
+                <option value="user">User</option>
+            </select> <br> <br> 
+            
+            <div id="emailsection" style="visibility: hidden;"><input type="text" class="" name='email' id="email" placeholder="email" /></div>
+            
+            <br> 
+
+            <button id="startBtn" onclick="startIntercom()">Start Intercom</button><br><br>
+
+            <div id="information" style="visibility: hidden;">
+                Intercom started!<br>
+                App ID: <p id="appidlbl">...</p><br>
+                Started as a <p id="persontypelbl">...</p><br><br>
+                <button onclick="Intercom('shutdown'); refresh()">Shutdown!</button><br><br>
+                <button onclick="hideit()">Hide!</button><br><br>
+                <button onclick="Intercom('show');">Show!</button><br><br>
+            </div>
+
+            
+            <button onclick="hideit()">Hide!</button><br><br>
+            <button onclick="Intercom('show');">Show!</button><br><br>
+
+   
+   
+   <script>//Set your APP_ID
+    var APP_ID = document.getElementById("app_id").value;
+    
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    
+
+    function startIntercom(){
+        var APP_ID = document.getElementById("app_id").value;
+
+        if(APP_ID != ""){
+            var personType = document.getElementById("persontype").value
+            var email = document.getElementById("email").value
+            if(personType == "user"){
+            window.Intercom('boot', {
+            app_id: APP_ID,
+            email: email
+            });
+            }
+
+            else{
+                window.Intercom('boot', {
+                app_id: APP_ID,
+                //Website visitor so may not have any user related info
+                });
+            }
+            document.getElementById("startBtn").style = "visibility: hidden;"
+            document.getElementById("information").style = "visibility: visible;"
+        }
+        
+    }
+
+    function showEmail(){
+        var personType = document.getElementById("persontype").value
+        if(personType == "user"){
+            document.getElementById("emailsection").style = "visibility: visible;"
+        }
+
+        if (personType == "visitor"){
+            document.getElementById("emailsection").style = "visibility: hidden;"
+        }
+    }
+    
+
+
+
+
+
+
+    function refresh(){
+        document.getElementById("startBtn").style = "visibility: visible;"
+        document.getElementById("information").style = "visibility: hidden;"
+    }
+
+    function hideit(){
+    Intercom('update', {
+        "hide_default_launcher": true});
+    }
+
+    </script>
+</body>
+</html>
